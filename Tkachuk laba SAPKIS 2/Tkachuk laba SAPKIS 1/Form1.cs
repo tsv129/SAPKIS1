@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -234,6 +233,55 @@ namespace Tkachuk_laba_SAPKIS_1
                 str = str + c[i];
             }
             TB.Text = str;
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            RegistryKey CUK = Registry.CurrentUser;
+            RegistryKey myKey = CUK.CreateSubKey("CalcReg");
+
+            myKey.SetValue("first", first);
+            myKey.SetValue("second", TB.Text);
+            myKey.SetValue("func", func);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            RegistryKey CUK = Registry.CurrentUser;
+            RegistryKey myKey = CUK.CreateSubKey("CalcReg");
+
+            first = Double.Parse(myKey.GetValue("first").ToString());
+            TB.Text = myKey.GetValue("second").ToString();
+            func = Byte.Parse(myKey.GetValue("func").ToString());
+            switch (func) //1 +;2 -;3 *;4 /;5 %;
+            {
+                case 1:
+                    {
+                        label1.Text = first.ToString() + '+';
+                        break;
+                    }
+                case 2:
+                    {
+                        label1.Text = first.ToString() + '-';
+                        break;
+                    }
+                case 3:
+                    {
+                        label1.Text = first.ToString() + '*';
+                        break;
+                    }
+                case 4:
+                    {
+                        label1.Text = first.ToString() + '/';
+                        break;
+                    }
+                case 5:
+                    {
+                        label1.Text = first.ToString() + '%';
+                        break;
+                    }
+
+            }
         }
 
         private void btn_CE_Click_1(object sender, EventArgs e)

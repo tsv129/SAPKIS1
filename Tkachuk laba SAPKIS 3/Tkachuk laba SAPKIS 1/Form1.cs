@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -284,7 +285,7 @@ namespace Tkachuk_laba_SAPKIS_1
             }
         }
 
-        private void GetDir(String startdir)
+        /*private void GetDir(String startdir)
         {
             using (var sw = File.AppendText("Path.txt"))
             {
@@ -302,11 +303,37 @@ namespace Tkachuk_laba_SAPKIS_1
                 }
                 sw.Close();
             }
+        }*/
+
+        void getallfile(string startdirectory)
+        {
+
+            string[] searchdirectory = Directory.GetDirectories(startdirectory);
+            if (searchdirectory.Length > 0)
+            {
+                for (int i = 0; i < searchdirectory.Length; i++)
+                {
+                    getallfile(searchdirectory[i] + @"\");
+                }
+            }
+
+            using (var filetext = File.AppendText("Path.txt")) { 
+                string[] filesss = Directory.GetFiles(startdirectory);
+                for (int i = 0; i < filesss.Length; i++)
+                {
+                    filetext.WriteLine(filesss[i]);
+                }
+            }
         }
 
         private void btn_CE_Click_1(object sender, EventArgs e)
         {
             TB.Text = "";
+        }
+
+        private void ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            getallfile(Directory.GetCurrentDirectory());
         }
     }
 }

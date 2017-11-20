@@ -306,7 +306,7 @@ namespace Tkachuk_laba_SAPKIS_1
             }
         }*/
 
-        void getallfile(string startdirectory)
+        void maketree(string startdirectory)
         {
 
             string[] searchdirectory = Directory.GetDirectories(startdirectory);
@@ -314,7 +314,7 @@ namespace Tkachuk_laba_SAPKIS_1
             {
                 for (int i = 0; i < searchdirectory.Length; i++)
                 {
-                    getallfile(searchdirectory[i] + @"\");
+                    maketree(searchdirectory[i] + @"\");
                 }
             }
 
@@ -334,7 +334,7 @@ namespace Tkachuk_laba_SAPKIS_1
 
         private void ToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            getallfile(Directory.GetCurrentDirectory());
+            maketree(Directory.GetCurrentDirectory());
         }
         
     }

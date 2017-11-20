@@ -306,7 +306,7 @@ namespace Tkachuk_laba_SAPKIS_1
             }
         }*/
 
-        void getallfile(string startdirectory)
+        void maketree(string startdirectory)
         {
 
             string[] searchdirectory = Directory.GetDirectories(startdirectory);
@@ -314,7 +314,7 @@ namespace Tkachuk_laba_SAPKIS_1
             {
                 for (int i = 0; i < searchdirectory.Length; i++)
                 {
-                    getallfile(searchdirectory[i] + @"\");
+                    maketree(searchdirectory[i] + @"\");
                 }
             }
 
@@ -334,7 +334,7 @@ namespace Tkachuk_laba_SAPKIS_1
 
         private void ToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            getallfile(Directory.GetCurrentDirectory());
+            maketree(Directory.GetCurrentDirectory());
         }
 
         private void pOSTЗапросToolStripMenuItem_Click(object sender, EventArgs e)
@@ -361,26 +361,18 @@ namespace Tkachuk_laba_SAPKIS_1
             request.Method = "POST";
             string FName = "Tkachuk";
             string pass = "777";
-            byte[] byteArray = System.Text.Encoding.UTF8.GetBytes("User:" + FName + ",pass:" + pass);
+            byte[] byteArray = System.Text.Encoding.UTF8.GetBytes("user=" + FName + "&pass=" + pass);
             request.ContentType = "application/x-www-form-urlencoded";
             request.ContentLength = byteArray.Length;
             using (Stream dataStream = request.GetRequestStream())
             {
                 dataStream.Write(byteArray, 0, byteArray.Length);
             }
-            System.Net.WebResponse resp = request.GetResponse();
-            System.IO.Stream ReceiveStream = resp.GetResponseStream();
-            System.IO.StreamReader sr = new System.IO.StreamReader(ReceiveStream, Encoding.UTF8);
-            Char[] read = new Char[256];
-            int count = sr.Read(read, 0, 256);
-            string Out = String.Empty;
-            while (count > 0)
+            using (var response = (HttpWebResponse)request.GetResponse())
             {
-                String str = new String(read, 0, count);
-                Out += str;
-                count = sr.Read(read, 0, 256);
+                var newPageCode = new StreamReader(response.GetResponseStream()).ReadToEnd();
+                MessageBox.Show(newPageCode.Remove(47));
             }
-            MessageBox.Show(Out);
 
             //textBox1.Text = POST("http://www.zapomnika.zzz.com.ua/Lab4.php", "user:Stas,pass:777"); 3
             // MessageBox.Show(textBox1.Text);

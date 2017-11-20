@@ -57,7 +57,6 @@
             this.допФункцииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pOSTЗапросToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -320,7 +319,7 @@
             this.допФункцииToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(345, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(211, 24);
             this.menuStrip1.TabIndex = 40;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -336,30 +335,22 @@
             // ToolStripMenuItem1
             // 
             this.ToolStripMenuItem1.Name = "ToolStripMenuItem1";
-            this.ToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.ToolStripMenuItem1.Size = new System.Drawing.Size(146, 22);
             this.ToolStripMenuItem1.Text = "Древо папок";
             this.ToolStripMenuItem1.Click += new System.EventHandler(this.ToolStripMenuItem1_Click);
             // 
             // pOSTЗапросToolStripMenuItem
             // 
             this.pOSTЗапросToolStripMenuItem.Name = "pOSTЗапросToolStripMenuItem";
-            this.pOSTЗапросToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pOSTЗапросToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.pOSTЗапросToolStripMenuItem.Text = "POST Запрос";
             this.pOSTЗапросToolStripMenuItem.Click += new System.EventHandler(this.pOSTЗапросToolStripMenuItem_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(218, 82);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 41;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(345, 251);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(211, 251);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_result);
             this.Controls.Add(this.btn_1divx);
@@ -430,7 +421,6 @@
         private System.Windows.Forms.ToolStripMenuItem допФункцииToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem pOSTЗапросToolStripMenuItem;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

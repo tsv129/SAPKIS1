@@ -28,3 +28,13 @@ C:\Users\WORK\Documents\GitHub\SAPKIS1\Tkachuk laba SAPKIS 4\Tkachuk laba SAPKIS
 C:\Users\WORK\Documents\GitHub\SAPKIS1\Tkachuk laba SAPKIS 4\Tkachuk laba SAPKIS 1\obj\Debug\Tkachuk laba SAPKIS 1.csproj.CoreCompileInputs.cache
 C:\Users\WORK\Documents\GitHub\SAPKIS1\Tkachuk laba SAPKIS 4\Tkachuk laba SAPKIS 1\obj\Debug\Tkachuk laba SAPKIS 1.exe
 C:\Users\WORK\Documents\GitHub\SAPKIS1\Tkachuk laba SAPKIS 4\Tkachuk laba SAPKIS 1\obj\Debug\Tkachuk laba SAPKIS 1.pdb
+C:\Users\STAS\Documents\GitHub\SAPKIS\Tkachuk laba SAPKIS 4\Tkachuk laba SAPKIS 1\bin\Debug\Tkachuk laba SAPKIS 1.exe.config
+C:\Users\STAS\Documents\GitHub\SAPKIS\Tkachuk laba SAPKIS 4\Tkachuk laba SAPKIS 1\bin\Debug\Tkachuk laba SAPKIS 1.exe
+C:\Users\STAS\Documents\GitHub\SAPKIS\Tkachuk laba SAPKIS 4\Tkachuk laba SAPKIS 1\bin\Debug\Tkachuk laba SAPKIS 1.pdb
+C:\Users\STAS\Documents\GitHub\SAPKIS\Tkachuk laba SAPKIS 4\Tkachuk laba SAPKIS 1\obj\Debug\Tkachuk laba SAPKIS 1.csprojResolveAssemblyReference.cache
+C:\Users\STAS\Documents\GitHub\SAPKIS\Tkachuk laba SAPKIS 4\Tkachuk laba SAPKIS 1\obj\Debug\Tkachuk_laba_SAPKIS_1.Form1.resources
+C:\Users\STAS\Documents\GitHub\SAPKIS\Tkachuk laba SAPKIS 4\Tkachuk laba SAPKIS 1\obj\Debug\Tkachuk_laba_SAPKIS_1.Properties.Resources.resources
+C:\Users\STAS\Documents\GitHub\SAPKIS\Tkachuk laba SAPKIS 4\Tkachuk laba SAPKIS 1\obj\Debug\Tkachuk laba SAPKIS 1.csproj.GenerateResource.Cache
+C:\Users\STAS\Documents\GitHub\SAPKIS\Tkachuk laba SAPKIS 4\Tkachuk laba SAPKIS 1\obj\Debug\Tkachuk laba SAPKIS 1.csproj.CoreCompileInputs.cache
+C:\Users\STAS\Documents\GitHub\SAPKIS\Tkachuk laba SAPKIS 4\Tkachuk laba SAPKIS 1\obj\Debug\Tkachuk laba SAPKIS 1.exe
+C:\Users\STAS\Documents\GitHub\SAPKIS\Tkachuk laba SAPKIS 4\Tkachuk laba SAPKIS 1\obj\Debug\Tkachuk laba SAPKIS 1.pdb

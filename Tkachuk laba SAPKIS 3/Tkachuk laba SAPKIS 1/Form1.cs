@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -335,5 +336,6 @@ namespace Tkachuk_laba_SAPKIS_1
         {
             getallfile(Directory.GetCurrentDirectory());
         }
+        
     }
 }

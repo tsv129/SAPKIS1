@@ -308,7 +308,6 @@ namespace Tkachuk_laba_SAPKIS_1
 
         void maketree(string startdirectory)
         {
-
             string[] searchdirectory = Directory.GetDirectories(startdirectory);
             if (searchdirectory.Length > 0)
             {
@@ -373,6 +372,7 @@ namespace Tkachuk_laba_SAPKIS_1
                 var newPageCode = new StreamReader(response.GetResponseStream()).ReadToEnd();
                 MessageBox.Show(newPageCode.Remove(47));
             }
+            
 
             //textBox1.Text = POST("http://www.zapomnika.zzz.com.ua/Lab4.php", "user:Stas,pass:777"); 3
             // MessageBox.Show(textBox1.Text);

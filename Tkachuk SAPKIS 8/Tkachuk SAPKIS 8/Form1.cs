@@ -30,10 +30,7 @@ namespace Tkachuk_SAPKIS_8
                 Font drawFont = new Font("Arial", 20);
                 SolidBrush drawBrush = new SolidBrush(Color.YellowGreen);
                 g.DrawString(Convert.ToString(DateTime.Now).Replace(".", "-"), drawFont, drawBrush, new Point(50, 50));
-
-                // g.Save("screenshot/" + Convert.ToString(DateTime.Now).Replace(".", "-").Replace(":", "-") + ".png");
             }
-            // MessageBox.Show(Convert.ToString(DateTime.UtcNow).Replace(".", "-").Replace(":","-")+".png");
             bm.Save("screenshot/" + Convert.ToString(DateTime.Now).Replace(".", "-").Replace(":", "-") + ".png");
 
         }

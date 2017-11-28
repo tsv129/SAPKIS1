@@ -57,6 +57,7 @@
             this.допФункцииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pOSTЗапросToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.яЛабаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -327,7 +328,8 @@
             // 
             this.допФункцииToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripMenuItem1,
-            this.pOSTЗапросToolStripMenuItem});
+            this.pOSTЗапросToolStripMenuItem,
+            this.яЛабаToolStripMenuItem});
             this.допФункцииToolStripMenuItem.Name = "допФункцииToolStripMenuItem";
             this.допФункцииToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
             this.допФункцииToolStripMenuItem.Text = "Доп.Функции";
@@ -335,16 +337,23 @@
             // ToolStripMenuItem1
             // 
             this.ToolStripMenuItem1.Name = "ToolStripMenuItem1";
-            this.ToolStripMenuItem1.Size = new System.Drawing.Size(146, 22);
+            this.ToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.ToolStripMenuItem1.Text = "Древо папок";
             this.ToolStripMenuItem1.Click += new System.EventHandler(this.ToolStripMenuItem1_Click);
             // 
             // pOSTЗапросToolStripMenuItem
             // 
             this.pOSTЗапросToolStripMenuItem.Name = "pOSTЗапросToolStripMenuItem";
-            this.pOSTЗапросToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.pOSTЗапросToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.pOSTЗапросToolStripMenuItem.Text = "POST Запрос";
             this.pOSTЗапросToolStripMenuItem.Click += new System.EventHandler(this.pOSTЗапросToolStripMenuItem_Click);
+            // 
+            // яЛабаToolStripMenuItem
+            // 
+            this.яЛабаToolStripMenuItem.Name = "яЛабаToolStripMenuItem";
+            this.яЛабаToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.яЛабаToolStripMenuItem.Text = "6-я лаба";
+            this.яЛабаToolStripMenuItem.Click += new System.EventHandler(this.яЛабаToolStripMenuItem_Click_1);
             // 
             // Form1
             // 
@@ -421,6 +430,7 @@
         private System.Windows.Forms.ToolStripMenuItem допФункцииToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem pOSTЗапросToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem яЛабаToolStripMenuItem;
     }
 }
 

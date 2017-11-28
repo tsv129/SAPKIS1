@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -363,6 +364,7 @@ namespace Tkachuk_laba_SAPKIS_1
             byte[] byteArray = System.Text.Encoding.UTF8.GetBytes("user=" + FName + "&pass=" + pass);
             request.ContentType = "application/x-www-form-urlencoded";
             request.ContentLength = byteArray.Length;
+
             using (Stream dataStream = request.GetRequestStream())
             {
                 dataStream.Write(byteArray, 0, byteArray.Length);
@@ -378,6 +380,18 @@ namespace Tkachuk_laba_SAPKIS_1
             // MessageBox.Show(textBox1.Text);
 
 
+        }
+
+        private void яЛабаToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            if (Process.GetProcessesByName("Tkachuk laba SAPKIS 1").Length != 0)
+            {
+                MessageBox.Show("this process is runneble");
+            }
+            else
+            {
+                System.Diagnostics.Process.Start(Application.StartupPath + "lab6/Tkachuk laba SAPKIS 1.exe");
+            }
         }
 
         //private static string POST(string Url, string Data) 3

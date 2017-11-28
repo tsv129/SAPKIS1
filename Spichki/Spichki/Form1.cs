@@ -10,16 +10,15 @@ using System.Windows.Forms;
 
 namespace Spichki
 {
-    // TODO:
-    // Кликать на спички
     public partial class Form1 : Form
     {
         Brush BrownBrush = Brushes.Brown;
         Brush YellowBrush = Brushes.Yellow;
-        int kolvo;
-        int space;
-        int basekol;
-        short[] spichki = new short[30];
+        public static bool firstmove = true;
+        private int kolvo;
+        private int space;
+        public static int basekol = 25;
+        private short[] spichki = new short[30];
 
         public Form1()
         {
@@ -66,18 +65,6 @@ namespace Spichki
             button5.Enabled = b;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            kolvo = basekol = Convert.ToInt32(numericUpDown1.Value);
-            space = 600 / (kolvo+1);
-            for (int y = 0; y < basekol; y++)
-                spichki[y] = 0;
-            DrawMatch();
-            ButtonSwap(true);
-            label1.Visible = true;
-            label2.Visible = true;
-        }
-
         private bool WinCheck(int p)
         {
             if (kolvo <= 0)
@@ -98,7 +85,7 @@ namespace Spichki
             return false;
         }
 
-        private static int RNG(int k)
+        public static int RNG(int k)
         {
             Random rng = new Random();
             return 1+rng.Next(k-1);
@@ -190,9 +177,24 @@ namespace Spichki
             MessageBox.Show("sdfdsfs");
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void новаяИграToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            numericUpDown1.Value = 10 + RNG(20);
+            kolvo = basekol;
+            space = 600 / (kolvo + 1);
+            for (int y = 0; y < basekol; y++)
+                spichki[y] = 0;
+            DrawMatch();
+            ButtonSwap(true);
+            label1.Visible = true;
+            label2.Visible = true;
+            if (!firstmove)
+                BotTurn();
+        }
+
+        private void настройкиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 options = new Form2();
+            options.Show();
         }
     }
 }
